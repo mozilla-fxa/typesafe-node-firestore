@@ -4,6 +4,9 @@
 
 A library of typescript interfaces that extend existing firestore classes, adding type safety and a better autocomplete experience.
 
+This library is for use with `@google-cloud/firestore`, while the library its based on is intended for the browser-based Javascript
+Firestore library.
+
 Based on [typesafe-firestore](https://github.com/chaseholdren/typesafe-firestore).
 
 ## Installation
