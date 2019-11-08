@@ -12,6 +12,8 @@ export interface TypedDocumentReference<T extends firestore.DocumentData>
 
   collection(collectionPath: string): TypedCollectionReference<T>;
 
+  create(data: T): Promise<firestore.WriteResult>;
+
   isEqual(other: TypedDocumentReference<T>): boolean;
 
   set(data: T, options?: firestore.SetOptions): Promise<firestore.WriteResult>;
