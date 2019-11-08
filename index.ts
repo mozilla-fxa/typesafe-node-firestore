@@ -39,6 +39,7 @@ export interface TypedDocumentReference<T extends firestore.DocumentData>
 
 export interface TypedDocumentSnapshot<T extends firestore.DocumentData>
   extends firestore.DocumentSnapshot {
+  readonly ref: TypedDocumentReference<T>;
   data(options?: firestore.QuerySnapshot): T | undefined;
 }
 
@@ -84,6 +85,7 @@ export interface TypedQuery<T extends TypedDocumentData<T>>
 
 export interface TypedQueryDocumentSnapshot<T extends firestore.DocumentData>
   extends firestore.QueryDocumentSnapshot {
+  readonly ref: TypedDocumentReference<T>;
   data(): T;
 }
 
