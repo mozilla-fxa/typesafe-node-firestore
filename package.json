@@ -1,6 +1,6 @@
 {
   "name": "typesafe-node-firestore",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": "github:bbangert/typesafe-node-firestore",
   "keywords": [
@@ -18,6 +18,7 @@
   "esnext": "index.ts",
   "scripts": {
     "build": "tsc",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
     "watch": "tsc --watch",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
