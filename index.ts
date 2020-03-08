@@ -5,6 +5,13 @@ export interface TypedDocumentData<T extends firestore.DocumentData>
   [field: string]: T;
 }
 
+export interface TypedDocumentChange<T extends firestore.DocumentData>
+  extends firestore.DocumentChange {
+  readonly doc: TypedQueryDocumentSnapshot<T>;
+
+  isEqual(other: TypedDocumentChange<T>): boolean;
+}
+
 export interface TypedDocumentReference<T extends firestore.DocumentData>
   extends firestore.DocumentReference {
   readonly parent: TypedCollectionReference<T>;
@@ -93,6 +100,8 @@ export interface TypedQueryDocumentSnapshot<T extends firestore.DocumentData>
 
 export interface TypedQuerySnapshot<T extends firestore.DocumentData>
   extends firestore.QuerySnapshot {
+  docChanges(): TypedDocumentChange<T>[];
+
   forEach(
     callback: (result: TypedQueryDocumentSnapshot<T>) => void,
     thisArg?: any
@@ -148,4 +157,9 @@ export interface TypedCollectionReference<T extends firestore.DocumentData>
   endAt(...fieldValues: T[keyof T][]): TypedQuery<T>;
 
   get(): Promise<TypedQuerySnapshot<T>>;
+
+  onSnapshot(
+    onNext: (snapshot: TypedQuerySnapshot<T>) => void,
+    onError?: (error: Error) => void
+  ): () => void;
 }
