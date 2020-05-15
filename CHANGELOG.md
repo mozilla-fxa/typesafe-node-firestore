@@ -1,6 +1,11 @@
+## 1.3.0 (2020-05-15)
+
+- chore: update peer dep and version ([a2f53e0](https://github.com/bbangert/typesafe-node-firestore/commit/a2f53e0))
+- chore(deps): bump acorn from 7.1.0 to 7.1.1 ([62f8eba](https://github.com/bbangert/typesafe-node-firestore/commit/62f8eba))
+
 ## 1.2.0 (2020-03-08)
 
-- chore: release 1.2.0 ([5c2ee4f](https://github.com/bbangert/typesafe-node-firestore/commit/5c2ee4f))
+- chore: release 1.2.0 ([4125836](https://github.com/bbangert/typesafe-node-firestore/commit/4125836))
 - feat: add docChanges and onsnapshot typings ([0104701](https://github.com/bbangert/typesafe-node-firestore/commit/0104701)), closes [#6](https://github.com/bbangert/typesafe-node-firestore/issues/6)
 
 ## 1.1.0 (2019-11-10)
