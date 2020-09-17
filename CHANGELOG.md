@@ -1,3 +1,9 @@
+## 1.4.0 (2020-09-17)
+
+- chore: bump peer dependencies ([9c04d70](https://github.com/bbangert/typesafe-node-firestore/commit/9c04d70))
+- chore(deps): bump lodash from 4.17.15 to 4.17.19 ([fad2a2b](https://github.com/bbangert/typesafe-node-firestore/commit/fad2a2b))
+- chore(deps): bump node-fetch from 2.6.0 to 2.6.1 ([10fb9d3](https://github.com/bbangert/typesafe-node-firestore/commit/10fb9d3))
+
 ## 1.3.0 (2020-05-15)
 
 - chore: update peer dep and version ([a2f53e0](https://github.com/bbangert/typesafe-node-firestore/commit/a2f53e0))
