@@ -100,6 +100,8 @@ export interface TypedQueryDocumentSnapshot<T extends firestore.DocumentData>
 
 export interface TypedQuerySnapshot<T extends firestore.DocumentData>
   extends firestore.QuerySnapshot {
+  readonly docs: TypedQueryDocumentSnapshot<T>[];
+
   docChanges(): TypedDocumentChange<T>[];
 
   forEach(
