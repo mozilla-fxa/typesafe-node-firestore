@@ -60,6 +60,8 @@ export interface TypedQuery<T extends TypedDocumentData<T>>
     value: T[keyof T]
   ): TypedQuery<T>;
 
+  where(filter: firestore.Filter): TypedQuery<T>;
+
   orderBy(
     fieldPath: keyof T | firestore.FieldPath,
     directionStr?: firestore.OrderByDirection
@@ -130,6 +132,8 @@ export interface TypedCollectionReference<T extends firestore.DocumentData>
     opStr: firestore.WhereFilterOp,
     value: T[keyof T]
   ): TypedQuery<T>;
+
+  where(filter: firestore.Filter): TypedQuery<T>;
 
   orderBy(
     fieldPath: keyof T | firestore.FieldPath,
