@@ -1,6 +1,6 @@
 {
   "name": "typesafe-node-firestore",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "license": "MIT",
   "repository": "github:bbangert/typesafe-node-firestore",
   "keywords": [
